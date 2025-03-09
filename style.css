@@ -1,0 +1,8 @@
+#example3 {
+             /*border: 2px solid black;*/
+             width:600px; /* screen width */
+             height:200px; /* screen height */
+             background-repeat: no-repeat;
+             background-size: cover;
+}
+/* https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp */	

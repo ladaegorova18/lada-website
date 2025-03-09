@@ -5,4 +5,28 @@
              background-repeat: no-repeat;
              background-size: cover;
 }
-/* https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp */	
+
+.gif-background {
+            width: 500px;
+            height: 300px;
+            background-image: url('gif_image_cat.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /*border: 2px solid #ccc;*/
+            text-align: center;
+            line-height: 300px;
+            color: black;
+            font-size: 24px;
+}
+
+#gif_cat {
+	position: absolute;
+  	left: 100px;
+  	top: 200px;
+}
+
+/* https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp */
+	
+/* for test animations thanks to:
+/* https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d */
+/* https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk*/

@@ -8,11 +8,11 @@
 // document.getElementById("gif_cat").addEventListener("mouseover", over);
 
 function onclick_event() {
-     document.getElementById("gif_cat").innerHTML = "Welcome to GeeksforGeeks!";
+     document.getElementById("gif_cat").innerHTML = "Default text";
 }
 
  function over() {
-     document.getElementById("gif_cat").style.color = "green";
+    //  document.getElementById("gif_cat").style.color = "green";
  }
 
  function openPDF() {

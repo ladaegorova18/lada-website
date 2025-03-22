@@ -1,34 +1,45 @@
-#example3 {
-             /*border: 2px solid black;*/
-             width:600px; /* screen width */
-             height:200px; /* screen height */
-             background-repeat: no-repeat;
-             /* background-size: auto; */
-             background-size: 100%;
-             /* background-size: cover; */
+#background_body {
+  /*border: 2px solid black;*/
+  width:600px; /* screen width */
+  height:200px; /* screen height */
+  background-repeat: no-repeat;
+  /* background-size: auto; */
+  background-size: 100%;
+  /* background-size: cover; */
 }
 
 .gif-background {
-            width: 400px;
-            height: 300px;
-            background-image: url('source/images/objects/gif_image_cat.gif');
-            background-size: cover;
-            background-repeat: no-repeat;
-            /*border: 2px solid #ccc;*/
-            text-align: center;
-            line-height: 300px;
-            color: black;
-            font-size: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: filter 0.3s ease-in-out;
+  /* pointer-events: none; */
+  position: absolute;
+}
+
+.gif-background:hover {
+  filter: drop-shadow(0 0 5px white);
 }
 
 #gif_cat {
-	position: absolute;
-  	left: 100px;
-  	top: 200px;
+  background-image: url('source/images/objects/gif_image_cat_1.gif');
+  width: 350px;
+  height: 250px;
+  right: 380px;
+  bottom: 80px;
 }
+
+#gif_cup_holder {
+  background-image: url('source/images/objects/cup_holder_2.png');
+  width: 250px;
+  height: 160px;
+  right: 680px;
+  bottom: 140px;
+}
+
 
 /* https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp */
 	
 /* for test animations thanks to:
 /* https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d */
 /* https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk*/
+/* https://giventofly.github.io/pixelit/#tryit */

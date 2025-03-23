@@ -15,14 +15,17 @@ function onclick_event() {
   }
 
 // Открываем popup
-function openPopup() {
-  document.getElementById("popup").classList.add("show");
+function openPopup(id) {
+  document.getElementById(id).classList.add("show");
 }
 
 // Закрываем popup
-function closePopup() {
-  document.getElementById("popup").classList.remove("show");
+function closePopup(id) {
+  document.getElementById(id).classList.remove("show");
 }
 
-
-// https://www.geeksforgeeks.org/how-to-add-gif-in-html/
+function getDisplayedBackgroundSize(element) {
+  let rect = element.getBoundingClientRect();
+  myString = ("Displayed Background Size:", rect.width + "x" + rect.height);
+  document.getElementById("text_content").textContent = myString;
+}

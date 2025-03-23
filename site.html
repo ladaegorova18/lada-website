@@ -10,28 +10,28 @@
 
 </head> 
 
-<body background="source/images/background9.png" id="background_body"> 
+<body id="background_body">
 
-	<div class="block" id="block">
-		<div class="gif-background" id="gif_cat" onclick="openPDF()">
+	<div class="container">
+		<div class="gif-object" id="gif_cat" onclick="openPDF()">
 			<div class="tooltip-box">My CV</div>
 		</div>
-	</div>
-	
-	<!-- <div class="gif-background" id="gif_girl" onclick="openPDF()"></div> -->
-	
-	
-	<div class="gif-background" id="gif_cup_holder" onclick="openPopup()">
-		<div class="tooltip-box">Links and thanks</div>
-	</div>
-	<div class="gif-background" id="gif_laptop" onclick="openPDF()">
-		<div class="tooltip-box">My projects</div>
-	</div>
+		<div class="gif-object" id="gif_laptop">
+			<div class="tooltip-box">My projects</div>
+		</div>
+		<div class="gif-object" id="gif_cup_holder" onclick="openPopup('popup_links')">
+			<div class="tooltip-box">Links and thanks</div>
+		</div>
+		<div class="gif-object" id="gif_girl" onclick="openPopup('popup_about')">
+			<div class="tooltip-box">About me</div>
+		</div>
+    </div>
 
-	<div id="popup" class="popup">
+
+	<div id="popup_links" class="popup">
 		<div class="popup-content">
 			<div class="popup-body">
-				<span class="close" onclick="closePopup()">&times;</span> 
+				<span class="close" onclick="closePopup('popup_links')">&times;</span> 
 				<h1>Links and thanks to:</h1>
 				<p>
 					<a href="https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp" target="_blank">GeeksforGeeks,</a>
@@ -50,7 +50,7 @@
 	<div id="popup_about" class="popup">
 		<div class="popup-content">
 			<div class="popup-body">
-				<span class="close" onclick="closePopup()">&times;</span> 
+				<span class="close" onclick="closePopup('popup_about')">&times;</span> 
 				<h1>Hello, stranger!</h1>
 				<p>
 					My name is Lada and I am a middle game developer. I am grad to share my background with you!. 
@@ -71,9 +71,8 @@
 </body> 
 </html>
 
-<!-- outline for the girl -->
-<!-- apk running (or videos) -->
 <!-- fix objects positions -->
+<!-- apk running (or videos) -->
 
 
 <!-- Future work: -->

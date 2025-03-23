@@ -1,76 +1,84 @@
-@font-face {
-  font-family: 'Calligraphy';
-  src: url('source/Calligrapher/Calligrapher') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Prevent responsive scaling */
 body {
-  min-width: 1024px; /* Adjust based on your desktop design */
+  min-width: 1024px; 
 }
 
-/* Override media queries */
 @media screen and (max-width: 1024px) {
   body {
-    zoom: 1 !important; /* Prevent scaling */
+    zoom: 1 !important; 
     width: 1024px !important;
     overflow-x: auto;
   }
 }
 
-#background_body {
-  /* position: relative; */
-  background-repeat: no-repeat;
-  background-size: 100%;
+body {
+  /* width: 100%;
+  height: 100%; */
+  margin: 0;
+  height: 100vh;
+  background: url("source/images/background9.png") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
 }
 
 /* --------------- Objects ------------------ */
 
-.gif-background {
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.gif-object {
+  position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
   transition: filter 0.3s ease-in-out;
-  /* pointer-events: none; */
-  position: fixed;
 }
 
-.gif-background:hover {
+.gif-object:hover {
   filter: drop-shadow(0 0 5px white);
 }
 
-#gif_cat {
-  background-image: url('source/images/objects/gif_image_cat_1.gif');
-  width: 20%;
-  height: 30%;
-  left: 25%;
-  top: 50%;
+.gif-object:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
 }
 
 #gif_cup_holder {
   background-image: url('source/images/objects/cup_holder_2.png');
   width: 12%;
-  height: 15%;
-  right: 35%;
-  bottom: 15%;
+  height: 12%;
+  left: 60%;
+  top: 73%;
+  transform: translate(-50%, -50%);
+}
+
+#gif_cat {
+  background-image: url('source/images/objects/gif_image_cat_1.gif');
+  width: 15%;
+  height: 25%;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
 #gif_laptop {
-  background-image: url('source/images/objects/laptop.png');
+  background-image: url('source/images/objects/laptop_2.png');
   width: 13%;
   height: 17%;
-  right: 25%;
+  right: 20%;
   bottom: 10%;
+  transform: translate(-50%, -50%);
 }
 
 #gif_girl {
+  clip-path: polygon(0 0, 29% 0, 38% 35%, 100% 55%, 100% 100%, 67% 100%, 54% 78%, 0 71%);
   background-image: url('source/images/objects/girl.png');
-  width: 482px;
-  height: 463px;
-  /* left: 0px;
-  top: 0px; */
-  /* right: 480px;
-  bottom: 110px; */
+  width: 32%;
+  height: 64%;
+  left: 22%;
+  top: 42%;
+  /* transform: translate(-50%, -50%); */
 }
 
 .tooltip-box {
@@ -83,19 +91,14 @@ body {
   padding: 10px;
   font-size: 14px;
   position: absolute;
-  bottom: 70%; 
-  left: 70%;
+  bottom: 50%; 
+  left: 50%;
   transform: translateX(-50%);
   opacity: 0; 
   transition: opacity 0.3s, visibility 0.3s;
 }
 
-.gif-background:hover .tooltip-box {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* ------------------- Popup --------------------- */
+/* ------------------- Popups --------------------- */
 
 .popup {
   position: fixed;

@@ -2,21 +2,79 @@
 <html lang="en"> 
 <head> 
 	<title>Lada's website</title> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js"></script>
 
 </head> 
 
 <body background="source/images/background9.png" id="background_body"> 
-	
-	<div class="gif-background" id="gif_cat" onclick="openPDF()"></div>
-	<div class="gif-background" id="gif_cup_holder" onclick="openPDF()"></div>
-	
-	<!-- <img src="source/images/objects/gif_image_cat.gif" id="scream" onclick="openPDF()"> -->
-	<!-- <img src="source/gif_image_cat.gif" id="scream" onclick="window.open(this.src)"> -->
 
-	<!-- <p><button onclick="myCanvas()">Try it</button></p> -->
+	<div class="block" id="block">
+		<div class="gif-background" id="gif_cat" onclick="openPDF()">
+			<div class="tooltip-box">My CV</div>
+		</div>
+	</div>
+	
+	<!-- <div class="gif-background" id="gif_girl" onclick="openPDF()"></div> -->
+	
+	
+	<div class="gif-background" id="gif_cup_holder" onclick="openPopup()">
+		<div class="tooltip-box">Links and thanks</div>
+	</div>
+	<div class="gif-background" id="gif_laptop" onclick="openPDF()">
+		<div class="tooltip-box">My projects</div>
+	</div>
+
+	<div id="popup" class="popup">
+		<div class="popup-content">
+			<div class="popup-body">
+				<span class="close" onclick="closePopup()">&times;</span> 
+				<h1>Links and thanks to:</h1>
+				<p>
+					<a href="https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp" target="_blank">GeeksforGeeks,</a>
+					<a href="https://imgur.com/gallery/pergaminho-stuck-NXOTzjP" target="_blank">polarkk,</a>
+				</p>
+				<p>
+					For test animations thanks to:
+					<a href="https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d" target="_blank">bowpixel,</a>
+					<a href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk" target="_blank">Diane Picchiottino,</a>
+					<a href="https://giventofly.github.io/pixelit/#tryit" target="_blank">Pixel it!</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="popup_about" class="popup">
+		<div class="popup-content">
+			<div class="popup-body">
+				<span class="close" onclick="closePopup()">&times;</span> 
+				<h1>Hello, stranger!</h1>
+				<p>
+					My name is Lada and I am a middle game developer. I am grad to share my background with you!. 
+					<br>
+					<br>
+					You can find my CV and projects on this website. 
+					<br>
+					<br>
+					Feel free to contact me via email: <a href="mailto:lada@example.com">ladaegorova2899@gmail.com</a>
+					<br>
+					<br>
+					Hope you enjoy!
+				</p>
+			</div>
+		</div>
+	</div>
 
 </body> 
-
 </html>
+
+<!-- outline for the girl -->
+<!-- apk running (or videos) -->
+<!-- fix objects positions -->
+
+
+<!-- Future work: -->
+<!-- mobile version -->

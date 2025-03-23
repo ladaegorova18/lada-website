@@ -1,12 +1,3 @@
-// let img = document.createElement("img");
-// img.src = "gif_image_cat.gif";
-// img.alt = "An Example";
-// img.width = 400;
-// img.height = 300;
-// document.getElementById("gif_cat").appendChild(img);
-
-// document.getElementById("gif_cat").addEventListener("mouseover", over);
-
 function onclick_event() {
      document.getElementById("gif_cat").innerHTML = "Default text";
 }
@@ -22,5 +13,16 @@ function onclick_event() {
     // Open the PDF in a new tab
     window.open(pdfURL, '_blank');
   }
+
+// Открываем popup
+function openPopup() {
+  document.getElementById("popup").classList.add("show");
+}
+
+// Закрываем popup
+function closePopup() {
+  document.getElementById("popup").classList.remove("show");
+}
+
 
 // https://www.geeksforgeeks.org/how-to-add-gif-in-html/

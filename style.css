@@ -1,19 +1,38 @@
-#background_body {
-  /*border: 2px solid black;*/
-  width:600px; /* screen width */
-  height:200px; /* screen height */
-  background-repeat: no-repeat;
-  /* background-size: auto; */
-  background-size: 100%;
-  /* background-size: cover; */
+@font-face {
+  font-family: 'Calligraphy';
+  src: url('source/Calligrapher/Calligrapher') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
+
+/* Prevent responsive scaling */
+body {
+  min-width: 1024px; /* Adjust based on your desktop design */
+}
+
+/* Override media queries */
+@media screen and (max-width: 1024px) {
+  body {
+    zoom: 1 !important; /* Prevent scaling */
+    width: 1024px !important;
+    overflow-x: auto;
+  }
+}
+
+#background_body {
+  /* position: relative; */
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* --------------- Objects ------------------ */
 
 .gif-background {
   background-size: cover;
   background-repeat: no-repeat;
   transition: filter 0.3s ease-in-out;
   /* pointer-events: none; */
-  position: absolute;
+  position: fixed;
 }
 
 .gif-background:hover {
@@ -22,24 +41,127 @@
 
 #gif_cat {
   background-image: url('source/images/objects/gif_image_cat_1.gif');
-  width: 350px;
-  height: 250px;
-  right: 380px;
-  bottom: 80px;
+  width: 20%;
+  height: 30%;
+  left: 25%;
+  top: 50%;
 }
 
 #gif_cup_holder {
   background-image: url('source/images/objects/cup_holder_2.png');
-  width: 250px;
-  height: 160px;
-  right: 680px;
-  bottom: 140px;
+  width: 12%;
+  height: 15%;
+  right: 35%;
+  bottom: 15%;
 }
 
+#gif_laptop {
+  background-image: url('source/images/objects/laptop.png');
+  width: 13%;
+  height: 17%;
+  right: 25%;
+  bottom: 10%;
+}
 
-/* https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp */
-	
-/* for test animations thanks to:
-/* https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d */
-/* https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk*/
-/* https://giventofly.github.io/pixelit/#tryit */
+#gif_girl {
+  background-image: url('source/images/objects/girl.png');
+  width: 482px;
+  height: 463px;
+  /* left: 0px;
+  top: 0px; */
+  /* right: 480px;
+  bottom: 110px; */
+}
+
+.tooltip-box {
+  visibility: hidden; 
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 70%; 
+  left: 70%;
+  transform: translateX(-50%);
+  opacity: 0; 
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.gif-background:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ------------------- Popup --------------------- */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+}
+
+.popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  min-width: 650px;
+  min-height: 650px;
+  background-image: url('source/images/objects/scroll_1.png');
+  background-size: 100%;
+  width: 15%;
+  height: 30%;
+  background-position: center;
+  border-radius: 0px;
+  text-align: center;
+  font-size: large;
+  color: #ff6a00;
+  overflow-y: auto;
+}
+
+.popup-body {
+  padding-top: 25%;
+  padding-bottom: 25%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  /* transform: translateX(50%); */
+}
+
+h1 {
+  color: #ff6a00;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #ff6a00;
+  text-decoration: none;
+  font-size: 16px;
+  display: block; /* Forces the link to be displayed as a block element */
+  margin-bottom: 10px; /* Optional: Add space between links */
+}
+
+a:hover {
+  text-decoration: underline;
+}

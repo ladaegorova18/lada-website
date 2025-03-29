@@ -7,22 +7,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css" />
 	<script src="script.js"></script>
-
 </head> 
 
 <body id="background_body">
 
 	<div class="container">
 		<div class="gif-object" id="gif_cat" onclick="openPDF()">
+			<img src="source/images/objects/gif_image_cat_1.gif" alt="cat">
 			<div class="tooltip-box">My CV</div>
 		</div>
-		<div class="gif-object" id="gif_laptop">
+		<div class="gif-object" id="gif_laptop" onclick="openPopupWithVideo('popup_projects')">
+			<img src="source/images/objects/laptop_2.png" alt="laptop">
 			<div class="tooltip-box">My projects</div>
 		</div>
 		<div class="gif-object" id="gif_cup_holder" onclick="openPopup('popup_links')">
+			<img src="source/images/objects/cup_holder_2.png" alt="cup_holder">
 			<div class="tooltip-box">Links and thanks</div>
 		</div>
 		<div class="gif-object" id="gif_girl" onclick="openPopup('popup_about')">
+			<img src="source/images/objects/girl.png" alt="girl">
 			<div class="tooltip-box">About me</div>
 		</div>
     </div>
@@ -31,7 +34,7 @@
 	<div id="popup_links" class="popup">
 		<div class="popup-content">
 			<div class="popup-body">
-				<span class="close" onclick="closePopup('popup_links')">&times;</span> 
+				<button class="close" onclick="closePopup('popup_links')">✖</button> 
 				<h1>Links and thanks to:</h1>
 				<p>
 					<a href="https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp" target="_blank">GeeksforGeeks,</a>
@@ -42,6 +45,7 @@
 					<a href="https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d" target="_blank">bowpixel,</a>
 					<a href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk" target="_blank">Diane Picchiottino,</a>
 					<a href="https://giventofly.github.io/pixelit/#tryit" target="_blank">Pixel it!</a>
+					<a href="https://onlinegiftools.com/pixelate-gif" target="_blank">Online GIF tools</a>
 				</p>
 			</div>
 		</div>
@@ -50,10 +54,13 @@
 	<div id="popup_about" class="popup">
 		<div class="popup-content">
 			<div class="popup-body">
-				<span class="close" onclick="closePopup('popup_about')">&times;</span> 
+				<button class="close" onclick="closePopup('popup_about')">✖</button> 
 				<h1>Hello, stranger!</h1>
 				<p>
-					My name is Lada and I am a middle game developer. I am grad to share my background with you!. 
+					My name is Lada and I am a middle game developer. 
+					<br>
+					<br>
+					I am glad to share my background with you!. 
 					<br>
 					<br>
 					You can find my CV and projects on this website. 
@@ -68,12 +75,27 @@
 		</div>
 	</div>
 
+	<div id="popup_projects" class="popup">
+		<div class="popup-content">
+			<video id="bgVideo" autoplay loop muted>
+				<source src="source/games/videos/checkout.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<div id="buttons">
+				<button class="close-btn" onclick="closePopupWithVideo('popup_projects')">✖</button>
+				<button class="prev-btn" onclick="changeVideo(-1)">&#10094;</button>
+				<button class="next-btn" onclick="changeVideo(1)">&#10095;</button>
+			</div>
+		</div>
+	</div>
+
 </body> 
 </html>
 
 <!-- fix objects positions -->
-<!-- apk running (or videos) -->
-
+<!-- find a better popup asset -->
+<!-- fix popup scrolling -->
+<!-- add other videos -->
 
 <!-- Future work: -->
 <!-- mobile version -->

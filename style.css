@@ -1,7 +1,3 @@
-body {
-  min-width: 1024px; 
-}
-
 @media screen and (max-width: 1024px) {
   body {
     zoom: 1 !important; 
@@ -10,12 +6,22 @@ body {
   }
 }
 
+@media (orientation: portrait) {
+  body {
+    background: url("source/images/background_mobile.png") no-repeat center center fixed;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    background: url("source/images/background9.png") no-repeat center center fixed;
+  }
+}
+
 body {
-  /* width: 100%;
-  height: 100%; */
-  margin: 0;
+  width: 100vw;
   height: 100vh;
-  background: url("source/images/background9.png") no-repeat center center fixed;
+  margin: 0;
   background-size: cover;
   position: relative;
 }
@@ -24,8 +30,14 @@ body {
 
 .container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .gif-object {
@@ -33,10 +45,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   transition: filter 0.3s ease-in-out;
+  pointer-events: auto;
 }
 
 .gif-object:hover {
-  filter: drop-shadow(0 0 5px white);
+  filter: drop-shadow(0 0 15px white);
 }
 
 .gif-object:hover .tooltip-box {
@@ -45,40 +58,30 @@ body {
 }
 
 #gif_cup_holder {
-  background-image: url('source/images/objects/cup_holder_2.png');
-  width: 12%;
-  height: 12%;
-  left: 60%;
-  top: 73%;
-  transform: translate(-50%, -50%);
+  height: 13vh;
+  right: calc(max(30vw, 30vw + var(--currratio) * 4.55vw));
+  top: calc(max(60vh, 60vh + var(--currratio) * 2vh));
 }
 
 #gif_cat {
-  background-image: url('source/images/objects/gif_image_cat_1.gif');
-  width: 15%;
-  height: 25%;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
+  height: 23vh;
+  left: calc(max(40vw, 40vw + var(--currratio) * 2vw));
+  top: calc(min(47vh, 47vh - var(--currratio) * 1vh));
 }
 
 #gif_laptop {
-  background-image: url('source/images/objects/laptop_2.png');
-  width: 13%;
-  height: 17%;
-  right: 20%;
-  bottom: 10%;
-  transform: translate(-50%, -50%);
+  height: 17vh;
+  right: calc(max(25vw, 25vw + var(--currratio) * 2vw));
+  top: calc(max(60vh, 60vh - (1 - var(--currratio)) * 3vh));
 }
 
 #gif_girl {
-  clip-path: polygon(0 0, 29% 0, 38% 35%, 100% 55%, 100% 100%, 67% 100%, 54% 78%, 0 71%);
-  background-image: url('source/images/objects/girl.png');
-  width: 32%;
-  height: 64%;
-  left: 22%;
-  top: 42%;
-  /* transform: translate(-50%, -50%); */
+  clip-path: polygon(40% 42%, 70% 43%, 100% 70%, 100% 100%, 62% 100%, 29% 86%, 1% 81%, 0 0, 37% 0);
+  left: 20vw;
+  /* bottom: 0vh; */
+  height: 60vh;
+  left: calc(min(20vw, 20vw - (1.777 - var(--currratio)) * 27vw));
+  bottom: calc(min(0vh, 0vh - (1.777 - var(--currratio)) * 1vw));
 }
 
 .tooltip-box {
@@ -123,25 +126,26 @@ body {
 }
 
 .popup-content {
-  min-width: 650px;
-  min-height: 650px;
-  background-image: url('source/images/objects/scroll_1.png');
+  /* background-image: url('source/images/objects/scroll_1.png'); */
+  background-color: wheat;
   background-size: 100%;
-  width: 15%;
-  height: 30%;
+  width: auto;
   background-position: center;
-  border-radius: 0px;
   text-align: center;
   font-size: large;
   color: #ff6a00;
   overflow-y: auto;
+
+  border: 10px solid rgb(182, 60, 20); 
+  border-radius: 15px; 
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+  padding: 5px;
 }
 
-.popup-body {
-  padding-top: 25%;
-  padding-bottom: 25%;
-  padding-left: 25%;
-  padding-right: 25%;
+.popup-content video {
+  position: relative;
+  width: 300px;
+  height: auto;
 }
 
 .close {
@@ -161,8 +165,8 @@ a {
   color: #ff6a00;
   text-decoration: none;
   font-size: 16px;
-  display: block; /* Forces the link to be displayed as a block element */
-  margin-bottom: 10px; /* Optional: Add space between links */
+  display: block;
+  margin-bottom: 10px; 
 }
 
 a:hover {

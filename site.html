@@ -46,6 +46,8 @@
 					<a href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk" target="_blank">Diane Picchiottino,</a>
 					<a href="https://giventofly.github.io/pixelit/#tryit" target="_blank">Pixel it!</a>
 					<a href="https://onlinegiftools.com/pixelate-gif" target="_blank">Online GIF tools</a>
+					<a href="https://opengameart.org" target="_blank">OpenGameArt</a>
+					<!-- https://bongseng.itch.io/parallax-forest-desert-sky-moon/download/eyJleHBpcmVzIjoxNzQzMzY0MjA0LCJpZCI6MzE3MDA4M30%3d.sygszjMAJ5Qac3oiFzvaWyx%2b6Fs%3d -->
 				</p>
 			</div>
 		</div>
@@ -76,26 +78,29 @@
 	</div>
 
 	<div id="popup_projects" class="popup">
-		<div class="popup-content">
-			<video id="bgVideo" autoplay loop muted>
-				<source src="source/games/videos/checkout.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-			<div id="buttons">
-				<button class="close-btn" onclick="closePopupWithVideo('popup_projects')">✖</button>
-				<button class="prev-btn" onclick="changeVideo(-1)">&#10094;</button>
-				<button class="next-btn" onclick="changeVideo(1)">&#10095;</button>
+		
+		<!-- <div class="popup-body"></div> -->
+		<button class="button nav-btn" onclick="changeVideo(-1)">&#10094;</button>
+		<div class="popup-content" id="popup_video">
+			<div id="video-wrapper">
+				<video id="bgVideo" autoplay loop muted>
+					<source src="source/games/videos/checkout.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<p id="video-description">Lorem Ipsum is simply dummy text of the printing 
+					and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+					ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+					it to make a type specimen book. It has survived not only five centuries, but also 
+					the leap into electronic typesetting, remaining essentially unchanged. It was 
+					popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+					passages, and more recently with desktop publishing software like Aldus PageMaker 
+					including versions of Lorem Ipsum
+				</p>
 			</div>
+			<button class="button close-btn" onclick="closePopupWithVideo('popup_projects')">✖</button>
 		</div>
+		<button class="button nav-btn" onclick="changeVideo(1)">&#10095;</button>
 	</div>
 
 </body> 
 </html>
-
-<!-- fix objects positions -->
-<!-- find a better popup asset -->
-<!-- fix popup scrolling -->
-<!-- add other videos -->
-
-<!-- Future work: -->
-<!-- mobile version -->

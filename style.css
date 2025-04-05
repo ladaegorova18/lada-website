@@ -298,7 +298,6 @@ img {
 
 .popup-content {
   background-color: black;
-  /* background-color: wheat; */
   background-size: 100%;
   width: auto;
   background-position: center;
@@ -311,7 +310,6 @@ img {
   max-height: 80vh;
 
   border: 10px solid whitesmoke; 
-  /* border: 10px solid rgb(182, 60, 20);  */
   border-radius: 15px; 
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
   padding: 1vh;
@@ -322,7 +320,6 @@ img {
   max-width: 77vw;
   /* max-width: inherit; */
   /* max-height: inherit; */
-  /* max-height: calc(var(--isHorizontal) * 60vh); */
   max-height: 60vh;
 }
 
@@ -335,8 +332,14 @@ img {
 
 #video-wrapper {
   display: flex;
-  align-items: center;
+  gap: 10px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 #popup_wrapper {

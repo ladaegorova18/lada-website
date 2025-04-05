@@ -42,10 +42,6 @@ function closePopup(id) {
 }
 
 function openPopupWithVideo(id) {
-  let video = document.getElementById("bgVideo");
-  let popup = document.getElementById(id);
-  popup.style.display = "flex";
-
   updateVideo(0); // Reset to the first video
 
   document.getElementById(id).classList.add("show");
@@ -79,22 +75,24 @@ function updateVideo(currentVideoIdx) {
   header.textContent = headers[currentVideoIdx];
 
   video.addEventListener("loadedmetadata", function() {
-    var isThin = document.documentElement.style.getPropertyValue('--isThin'); // Check if the screen is thin (portrait mode)
+    updatePositions();
+
+    const isPortrait = window.innerHeight > window.innerWidth;
     const wrapper = document.getElementById("video-wrapper");
-    if (video.videoHeight > video.videoWidth && !isThin) {
-      // wrapper.style.width = `${videoWidth * 2}px`;
-      wrapper.style.flexDirection = "row"; // Vertical: Description to the right
+    const textWrapper = document.getElementById("text-wrapper");
+    console.log("Is bigger: " + (video.videoHeight > video.videoWidth));
+    console.log("isPortrait: " + isPortrait);
+    
+    let condition = video.videoHeight > video.videoWidth && isPortrait == 0;
+    console.log("Condition: " + condition);
+    if (condition) {
+      wrapper.style.flexDirection = "row";
+      textWrapper.style.maxWidth = "30vw";
     } else {
-      // wrapper.style.height = `${videoHeight * 2}px`;
-      wrapper.style.flexDirection = "column"; // Horizontal: Description below
+      wrapper.style.flexDirection = "column"; 
+      textWrapper.style.maxWidth = "80vw";
     }
   });
-
-  let popup_video = document.getElementById("popup_video");
-  let height = popup_video.offsetHeight;
-  // let height = popup_video.getBoundingClientRect().height;
-  console.log("Video client height: " + height);
-  document.documentElement.style.setProperty('--popupVideoHeight', height + "px");
 
   video.play();
 }
@@ -110,11 +108,9 @@ function updatePositions(){
   console.log("Current Ratio: " + currentRatio);
   console.log("Ratio diff: " + (currentRatio - standardRatio));
   if (currentRatio > standardRatio) {
-    document.documentElement.style.setProperty('--isWide', 1);
     document.documentElement.style.setProperty('--isThin', 0);
   }
   else {
-    document.documentElement.style.setProperty('--isWide', 0);
     document.documentElement.style.setProperty('--isThin', 1);
   }
 }

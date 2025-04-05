@@ -38,47 +38,61 @@
 
 
 	<div id="popup_links" class="popup">
-		<div class="popup-content">
-			<div class="popup-body">
-				<button class="close" onclick="closePopup('popup_links')">✖</button> 
-				<h1>Links and thanks to:</h1>
-				<p>
-					<a href="https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp" target="_blank">GeeksforGeeks,</a>
-					<a href="https://imgur.com/gallery/pergaminho-stuck-NXOTzjP" target="_blank">polarkk,</a>
-				</p>
-				<p>
-					For test animations thanks to:
-					<a href="https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d" target="_blank">bowpixel,</a>
-					<a href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk" target="_blank">Diane Picchiottino,</a>
-					<a href="https://giventofly.github.io/pixelit/#tryit" target="_blank">Pixel it!</a>
-					<a href="https://onlinegiftools.com/pixelate-gif" target="_blank">Online GIF tools</a>
-					<a href="https://opengameart.org" target="_blank">OpenGameArt</a>
-					<!-- https://bongseng.itch.io/parallax-forest-desert-sky-moon/download/eyJleHBpcmVzIjoxNzQzMzY0MjA0LCJpZCI6MzE3MDA4M30%3d.sygszjMAJ5Qac3oiFzvaWyx%2b6Fs%3d -->
-				</p>
+		<div id="popup_wrapper">
+			<div id="video-btns">
+				<button class="button close-btn"></button>
+			</div>
+			<div class="popup-content">
+				<div class="popup-body">
+					<h1>Links and thanks to:</h1>
+					<p>
+						<a href="https://www.geeksforgeeks.org/how-to-stretch-and-scale-background-image-using-css/?ref=ml_lbp" target="_blank">GeeksforGeeks,</a>
+						<a href="https://imgur.com/gallery/pergaminho-stuck-NXOTzjP" target="_blank">polarkk,</a>
+					</p>
+					<p>
+						For test animations thanks to:
+						<a href="https://bowpixel.itch.io/cat-50-animations/download/eyJpZCI6MTk1Mzg3OSwiZXhwaXJlcyI6MTc0MTUwMTk0Mn0%3d.i4spbciAZJE7beRgxarIv5Qa%2fh8%3d" target="_blank">bowpixel,</a>
+						<a href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk" target="_blank">Diane Picchiottino,</a>
+						<a href="https://giventofly.github.io/pixelit/#tryit" target="_blank">Pixel it!</a>
+						<a href="https://onlinegiftools.com/pixelate-gif" target="_blank">Online GIF tools</a>
+						<a href="https://opengameart.org" target="_blank">OpenGameArt</a>
+						<!-- https://bongseng.itch.io/parallax-forest-desert-sky-moon/download/eyJleHBpcmVzIjoxNzQzMzY0MjA0LCJpZCI6MzE3MDA4M30%3d.sygszjMAJ5Qac3oiFzvaWyx%2b6Fs%3d -->
+					</p>
+				</div>
+			</div>
+			<div id="video-btns">
+				<button class="button close-btn" onclick="closePopup('popup_links')">✖</button>
 			</div>
 		</div>
 	</div>
 
 	<div id="popup_about" class="popup">
-		<div class="popup-content">
-			<div class="popup-body">
-				<button class="close" onclick="closePopup('popup_about')">✖</button> 
-				<h1>Hello, stranger!</h1>
-				<p>
-					My name is Lada and I am a middle game developer. 
-					<br>
-					<br>
-					I am glad to share my background with you!. 
-					<br>
-					<br>
-					You can find my CV and projects on this website. 
-					<br>
-					<br>
-					Feel free to contact me via email: <a href="mailto:lada@example.com">ladaegorova2899@gmail.com</a>
-					<br>
-					<br>
-					Hope you enjoy!
-				</p>
+		<div id="popup_wrapper">
+			<div id="video-btns">
+				<button class="button close-btn"></button>
+			</div>
+			<div class="popup-content">
+				<div class="popup-body">
+					<h1>Hello, stranger!</h1>
+					<p>
+						My name is Lada and I am a middle game developer. 
+						<br>
+						<br>
+						I am glad to share my background with you!. 
+						<br>
+						<br>
+						You can find my CV and projects on this website. 
+						<br>
+						<br>
+						Feel free to contact me via email: <a href="mailto:lada@example.com">ladaegorova2899@gmail.com</a>
+						<br>
+						<br>
+						Hope you enjoy!
+					</p>
+				</div>
+			</div>
+			<div id="video-btns">
+				<button class="button close-btn" onclick="closePopup('popup_about')">✖</button>
 			</div>
 		</div>
 	</div>
@@ -95,12 +109,14 @@
 						<source src="source/games/videos/checkout.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 					</video>
-					<h1 class="video-description" id="video-header">Checkout</h1>
-					<p class="video-description" id="description">
-						Developing a mobile game in just two weeks at a summer IT school turned out to 
-						be a significant project on Unity. The player’s task is to scan a product by rotating it with 
-						their fingers so that the scan code appears in the center of the screen.
-					</p>
+					<div class="text-wrapper" id="text-wrapper">
+						<h1 class="video-description" id="video-header">Checkout</h1>
+						<p class="video-description" id="description">
+							Developing a mobile game in just two weeks at a summer IT school turned out to 
+							be a significant project on Unity. The player’s task is to scan a product by rotating it with 
+							their fingers so that the scan code appears in the center of the screen.
+						</p>
+					</div>
 				</div>
 			</div>
 			<div id="video-btns">

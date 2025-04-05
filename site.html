@@ -12,6 +12,12 @@
 <body id="background_body">
 
 	<div class="container">
+		<!-- <img class="background-main">
+		<img class="background-window">
+		<div class="moving-background" id="background-tree"></div>
+		<div class="moving-background" id="background-moutains"></div> -->
+
+
 		<div class="gif-object" id="gif_cat" onclick="openPDF()">
 			<img src="source/images/objects/gif_image_cat_1.gif" alt="cat">
 			<div class="tooltip-box">My CV</div>
@@ -78,28 +84,30 @@
 	</div>
 
 	<div id="popup_projects" class="popup">
-		
-		<!-- <div class="popup-body"></div> -->
-		<button class="button nav-btn" onclick="changeVideo(-1)">&#10094;</button>
-		<div class="popup-content" id="popup_video">
-			<div id="video-wrapper">
-				<video id="bgVideo" autoplay loop muted>
-					<source src="source/games/videos/checkout.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				<p id="video-description">Lorem Ipsum is simply dummy text of the printing 
-					and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
-					ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-					it to make a type specimen book. It has survived not only five centuries, but also 
-					the leap into electronic typesetting, remaining essentially unchanged. It was 
-					popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-					passages, and more recently with desktop publishing software like Aldus PageMaker 
-					including versions of Lorem Ipsum
-				</p>
+		<div id="popup_wrapper">
+			<div id="video-btns">
+				<button class="button close-btn"></button>
+				<button class="button nav-btn" onclick="changeVideo(-1)">&#10094;</button>
 			</div>
-			<button class="button close-btn" onclick="closePopupWithVideo('popup_projects')">✖</button>
+			<div class="popup-content" id="popup_video">
+				<div id="video-wrapper">
+					<video id="bgVideo" autoplay loop muted>
+						<source src="source/games/videos/checkout.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<h1 class="video-description" id="video-header">Checkout</h1>
+					<p class="video-description" id="description">
+						Developing a mobile game in just two weeks at a summer IT school turned out to 
+						be a significant project on Unity. The player’s task is to scan a product by rotating it with 
+						their fingers so that the scan code appears in the center of the screen.
+					</p>
+				</div>
+			</div>
+			<div id="video-btns">
+				<button class="button close-btn" onclick="closePopupWithVideo('popup_projects')">✖</button>
+				<button class="button nav-btn" onclick="changeVideo(1)">&#10095;</button>
+			</div>
 		</div>
-		<button class="button nav-btn" onclick="changeVideo(1)">&#10095;</button>
 	</div>
 
 </body> 

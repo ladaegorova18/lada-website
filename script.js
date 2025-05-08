@@ -1,5 +1,6 @@
 const videos = [
   "source/games/videos/checkout.mp4",
+  "source/games/videos/elevator.mp4",
   "source/games/videos/trik_studio.mp4",
   "source/games/videos/saber.mp4"
 ];
@@ -12,12 +13,14 @@ const videos = [
 
 const descriptions = [
   "Developing a mobile game in just two weeks at a summer IT school turned out to be a significant project. The player’s task is to scan a product by rotating it with their fingers so that the scan code appears in the center of the screen. The game was published in Play Market, however it is not available for download now. The game was developed in a team of 4 people, where I was responsible for the development of the game logic and the user interface. The game was developed in Unity and C#.",
+  "In this game, you assume the role of an elevator operator, assisting the adorable slimes from a quiet village. The slimes have relocated to a big house, and they require an elevator to ascend and descend between the floors. The game is developed using Unity and C#, and it brings the village to life with charming characters and engaging gameplay.",
   "TRIK Studio is an integrated development environment designed using QtCreator for children to learn robot programming that features a simulation run that utilizes a 2D virtual robot model. The purpose of the work was to improve the quality of visualization and make it three-dimensional. The problem was solved on Unity engine. The demo video shows the work of the simulated environment, where the robot moves along a given path and performs a task. The robot is controlled by a program written in the TRIK Studio IDE and the running program sincronizes with Unity project where the environment is simulated.",
   "Saber Interactive is a game development company, probably you know them by the titles Timeshift, World War Z, Warhammer 40000: Space Marine 2 and others. I was happy to be a part of the big team. My duties included developing BI logic, user achievements logic, communication with user web portal, backend support and helping other teams with some gameplay tasks."
 ]
 
 const headers = [
   "Checkout",
+  "Elevator",
   "TRIK Studio 3D Visualization",
   "Saber Interactive project"
 ]
